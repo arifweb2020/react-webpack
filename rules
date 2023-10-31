@@ -40,3 +40,12 @@ npm add -D css-loader style-loader
       },
       if you are using normal css test: /\.css$/,
 18> when you are adding any images in any format make one file name is declarations.d.ts inside the src folder
+19> setup webpack for multiple environments
+for merge dev and prod webpack
+npm add -D webpack-merge
+for single env use  "start": "webpack serve --config webpack/webpack.config.js --open",
+20> we can define our env var use in the app using new webpack.DefinePlugin
+21> run in build command
+npm run build
+cd build
+npx serve
