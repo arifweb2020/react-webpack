@@ -1,0 +1,32 @@
+steps
+
+1> .gitignore
+2> src folder
+3> build
+4> for pacakge json npm init --y
+5> index.html file inside src folder (! press tab)
+6> npm add react react-dom
+7> npm add -D typescript @types/react @types/react-dom
+8> config for typescript complier create tsconfig.json in root folder the code is used
+for type checking not code compilation
+9> setup entry point in src folder index.tsx App.tsx
+10> react code is not understood by browser we need babel to convert react and ts code to json
+npm add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+11> root of the folder create .babelrc file (a project can transpile modern js feature into a format a browser can understood)
+12> create a webpack use of module bundler the code we write across multiple component
+bundle by webapck which can refrence by index.html file
+install webpack
+npm install -D webapck webpack-cli webpack-dev-server html-webpack-plugin
+if error getting
+npm install webpack webpack-cli --save-dev
+npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
+13> we need babel loader package which allows transpiling js file using babel and webpack
+npm add -D babel-loader 
+or
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
+14> create a folder webpack in root directory 
+- create webpack-config.js file
+15> add npm script to run app in package json file
+"scripts": {
+    "start": "webpack serve --config webpack/webpack.config.js --open",
+ }
