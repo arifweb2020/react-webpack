@@ -30,3 +30,5 @@ npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --sav
 "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --open",
  }
+16> npm start run your app
+if you are getting error run this command - npm install @babel/plugin-transform-runtime --save-dev
