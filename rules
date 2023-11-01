@@ -89,3 +89,36 @@ have extension
 
 26> if lint work install - npm install eslint-plugin-eslint-comments@latest --save-dev
 then npm run lint
+
+27> formating code with prettier
+npm install -D prettier eslint-config-prettier eslint-plugin-prettier 
+
+28> create one in root project with .prettierrc.js file name
+add in package json file
+
+"scripts": {
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+  },
+
+ctrl + , and set formatonsave true
+
+29> how to prevent linting error and formating error for being commited to our repsistory
+install husky
+npm install -D husky@4 lint-staged
+
+after add this piece of code in package.json file
+
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+
