@@ -66,3 +66,26 @@ in package json file
       hot: true,
       open: true,
     },
+23> eslint - that catches error when you are typing the code
+npm install -D eslint  
+additional package to support the code library 
+npm install -D eslint-plugin-react eslint-plugin-react-hooks  
+
+and if you are using typescript you to install 2 more packages
+npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+24> Add .eslintrc.js file in project root
+we can add more rule npm install -D eslint-plugin-import eslint-plugin-jsx-a11y
+import plugin support of es6 plus import export syntax and prevent issue for missplelling file path
+a11y plugin accessibility statndard in yr app in real time
+
+25> add pacakge.json file
+"scripts": {
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+  },
+
+it's asking eslint fix any possible error that it can other wise highilght error in src folder which 
+have extension 
+
+26> if lint work install - npm install eslint-plugin-eslint-comments@latest --save-dev
+then npm run lint

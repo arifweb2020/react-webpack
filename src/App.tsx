@@ -3,6 +3,7 @@ import Logo from './react-logo.png'
 import Counter from './Counter';
 
 const App = () => {
+  const test = 0;
   return (
     <div>
       <h1>Webpack setup refresh</h1>
