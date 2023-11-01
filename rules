@@ -122,3 +122,17 @@ after add this piece of code in package.json file
     ]
   }
 
+30> copy webpack plugin - it can be used to copy static assets in build folder
+npm install -D copy-webpack-plugin
+and add new CopyPlugin({
+      patterns:[{from:'source', to:'dest'}]
+    })
+    in webpack.common.js file
+
+ 31> bundel size analyze
+npm install -D webpack-bundle-analyzer   
+add this
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
+BundleAnalyzerPlugin() 
+in webpack.prod.js
